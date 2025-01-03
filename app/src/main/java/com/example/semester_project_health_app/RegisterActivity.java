@@ -46,7 +46,9 @@ TextView tvToLogin;
                 String reg_email=email_reg.getText().toString();
             String reg_password=reg_pass.getText().toString();
             String reg_confirm=reg_conf_pass.getText().toString();
-            if(reg_uname.length()==0 || reg_email.length()==0||reg_password.length()==0||reg_confirm.length()==0){
+            DataBase db=new DataBase(getApplicationContext(),"healthcare",null,1);
+
+            if(reg_uname.isEmpty() || reg_email.isEmpty() ||reg_password.isEmpty() ||reg_confirm.isEmpty()){
                 Toast.makeText(RegisterActivity.this, "No empty field acceptable", Toast.LENGTH_SHORT).show();
 
             }
@@ -54,14 +56,17 @@ TextView tvToLogin;
                 if(reg_password.compareTo(reg_confirm)==0)
                 {
 
-if(isValid(reg_password)){
+                      if(isValid(reg_password)){
+                          db.register(reg_uname,reg_email,reg_password);
 
-    Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-    Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
-    startActivity(intent);
-}else{
-    Toast.makeText(RegisterActivity.this, "Password should be atleast 8 characters\nPassword must contain character ,digits , special symbols", Toast.LENGTH_SHORT).show();
-}
+                               Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                                       startActivity(intent);
+                       }
+                      else
+                       {
+                           Toast.makeText(RegisterActivity.this, "Password should be atleast 8 characters\nPassword must contain character ,digits , special symbols", Toast.LENGTH_SHORT).show();
+                       }
 
                 }
                 else{
