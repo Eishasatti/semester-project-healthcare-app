@@ -209,7 +209,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardExitCard"
+                android:id="@+id/ExitCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
