@@ -2,71 +2,74 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fd"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="@drawable/downloadit"
 
     >
+
     <TextView
         android:id="@+id/line_a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:text="TextView"
         android:textColor="#ffffff"
         android:textSize="16dp"
-        android:layout_margin="5dp"
         android:textStyle="bold">
 
     </TextView>
-        <TextView
-            android:id="@+id/line_b"
-            android:text="Text View"
-            android:textColor="#FFF000"
-            android:textSize="14sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
 
-        </TextView>
+    <TextView
+        android:id="@+id/line_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Text View"
+        android:textColor="@color/black"
+        android:textSize="14sp">
+
+    </TextView>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1">
+
         <TextView
+            android:id="@+id/line_c"
             android:layout_width="8dp"
             android:layout_height="wrap_content"
-            android:id="@+id/line_c"
             android:layout_margin="5dp"
-            android:text="TextView"
             android:layout_weight="0.20"
-            android:textColor="#ffff66"
-            android:textSize="12sp"
-            >
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="12sp">
 
         </TextView>
+
         <TextView
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
             android:id="@+id/line_d"
-            android:text="TextView"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:layout_weight="0.5"
-            android:textColor="#ffff66"
-            android:textSize="12sp"
-            >
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="12sp">
 
         </TextView>
+
         <TextView
+            android:id="@+id/line_e"
             android:layout_width="8dp"
             android:layout_height="wrap_content"
-            android:id="@+id/line_e"
-            android:text="TextView"
-android:layout_margin="3dp"
+            android:layout_margin="3dp"
             android:layout_weight="0.3"
-            android:textColor="#ffff66"
-            android:textSize="12sp"
-            >
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="12sp">
 
         </TextView>
 
