@@ -3,6 +3,7 @@ package com.example.semester_project_health_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -121,6 +122,22 @@ sa=new SimpleAdapter(this,
 
         ListView lst=findViewById(R.id.ListViewDoctorDetails);
         lst.setAdapter(sa);
+
+        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+             Intent intent=new Intent(DoctorDetailActivity.this, BookAppointmentActivity.class);
+             intent.putExtra("text1",title);
+             intent.putExtra("text2",doctors_detail[position][0]);
+                intent.putExtra("text3",doctors_detail[position][1]);
+                intent.putExtra("text4",doctors_detail[position][3]);
+                intent.putExtra("text5",doctors_detail[position][4]);
+                startActivity(intent);
+
+            }
+        });
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

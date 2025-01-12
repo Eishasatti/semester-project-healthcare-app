@@ -48,5 +48,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        CardView labtst=findViewById(R.id.cardLabtest);
+        labtst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),LabTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
