@@ -76,20 +76,17 @@ HashMap<String,String> item;
             doctors_detail=doctor_details1;
         } else if (title.compareTo("Dietician")==0) {
 
-doctors_detail=doctor_details2;
+            doctors_detail=doctor_details2;
         }
         else if (title.compareTo("Surgeon")==0) {
 
-doctors_detail=doctor_details3;
+             doctors_detail=doctor_details3;
         }
         else if (title.compareTo("Cardiologist")==0) {
 
-doctors_detail=doctor_details4;
+              doctors_detail=doctor_details4;
         }
-        else if (title.compareTo("Dentist")==0) {
-doctors_detail=doctor_details5;
 
-        }
         else{
             doctors_detail=doctor_details5;
         }
@@ -103,7 +100,7 @@ doctors_detail=doctor_details5;
         });
 
 
-list=new ArrayList();
+list=new ArrayList<>();
 for(int i=0;i<doctors_detail.length;i++){
     item=new HashMap<String,String>();
     item.put("line1",doctors_detail[i][0]);
@@ -117,7 +114,8 @@ for(int i=0;i<doctors_detail.length;i++){
 
 sa=new SimpleAdapter(this,
         list,
-        R.layout.multi_lines_view,new String[]{"line1","line2","line3","line4","line5"},
+        R.layout.multi_lines_view,
+        new String[]{"line1","line2","line3","line4","line5"},
         new int[]{R.id.line_a,R.id.line_b,R.id.line_c,R.id.line_d,R.id.line_e});
 
         ListView lst=findViewById(R.id.ListViewDoctorDetails);
