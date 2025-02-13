@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DoctorDetailActivity"
-    android:background="@drawable/back1">
+    android:background="@color/lightblue">
 
     <TextView
         android:id="@+id/textViewTitleApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" 24*7 HealthCare"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="38dp"
         android:textStyle="bold"
         android:visibility="visible"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Default Text"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="28dp"
         android:textStyle="bold"
         android:visibility="visible"
