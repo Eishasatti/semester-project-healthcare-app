@@ -104,6 +104,12 @@ ListView listview;
 
             }
         });
+        btnCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LabTestActivity.this,CartActivity.class));
+            }
+        });
 
     }
 }
