@@ -14,4 +14,23 @@
     <color name="colorRed">#C11515</color>
     <color name="purpleDark">#FF210642</color>
     <color name="yellowLight">#fff777</color>
+    <color name="blueLight">#ADD8E6</color> <!-- Light Blue -->
+    <color name="blueSky">#87CEEB</color> <!-- Sky Blue -->
+    <color name="blueDeepSky">#00BFFF</color> <!-- Deep Sky Blue -->
+    <color name="blueDodger">#1E90FF</color> <!-- Dodger Blue -->
+    <color name="blueCornflower">#6495ED</color> <!-- Cornflower Blue -->
+    <color name="blueRoyal">#4169E1</color> <!-- Royal Blue -->
+    <color name="blueMedium">#0000CD</color> <!-- Medium Blue -->
+    <color name="blueDark">#00008B</color> <!-- Dark Blue -->
+    <color name="blueNavy">#000080</color> <!-- Navy Blue -->
+    <color name="blueMidnight">#191970</color> <!-- Midnight Blue -->
+
+    <!-- Gradient Shades of Blue (Defined as start and end colors for gradients) -->
+    <color name="blueGradientStart">#56CCF2</color> <!-- Light Sky Gradient Start -->
+    <color name="blueGradientEnd">#2F80ED</color> <!-- Dark Sky Gradient End -->
+    <color name="blueOceanStart">#2E3192</color> <!-- Deep Ocean Start -->
+    <color name="blueOceanEnd">#1BFFFF</color> <!-- Deep Ocean End -->
+    <color name="blueAquaStart">#13547A</color> <!-- Aqua Gradient Start -->
+    <color name="blueAquaEnd">#80D0C7</color> <!-- Aqua Gradient End -->
+
 </resources>
