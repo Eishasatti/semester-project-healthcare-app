@@ -31,7 +31,7 @@ public class OrderDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_order_detail);
-        lst=findViewById(R.id.ListViewOD);
+        lst=findViewById(R.id.ListViewHA);
         backbtn=findViewById(R.id.btnBackOD);
 
         DataBase db = new DataBase(getApplicationContext(), "healthcare", null, 1);

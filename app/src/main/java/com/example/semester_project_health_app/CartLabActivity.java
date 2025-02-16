@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class CartActivity extends AppCompatActivity {
+public class CartLabActivity extends AppCompatActivity {
     HashMap<String, String> item;
     ArrayList list;
     private String[][] packages={};
@@ -45,13 +45,13 @@ public class CartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_cart);
-        dateButton=findViewById(R.id.buttonCartDatePicker);
+        setContentView(R.layout.activity_cart_labtest);
+        dateButton=findViewById(R.id.buttonBMCDatePicker);
         timeButton=findViewById(R.id.buttonCartTimePicker);
-        btnCheck=findViewById(R.id.buttonCartCheckout);
-        btnBack=findViewById(R.id.buttonCartBack);
-        tvTotal=findViewById(R.id.textViewCartTotalCost);
-        listvew=findViewById(R.id.listViewBM);
+        btnCheck=findViewById(R.id.buttonBMCCheckout);
+        btnBack=findViewById(R.id.buttonBMCBack);
+        tvTotal=findViewById(R.id.textViewBMCTotalCost);
+        listvew=findViewById(R.id.listViewBMCart);
 
         SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedpreferences.getString("userName", "").toString();
@@ -104,13 +104,13 @@ tvTotal.setText("Total Cost : "+totalAmount);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartActivity.this,LabTestActivity.class));
+                startActivity(new Intent(CartLabActivity.this,LabTestActivity.class));
             }
         });
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(CartActivity.this, LabTestBookActivity.class);
+                Intent it = new Intent(CartLabActivity.this, LabTestBookActivity.class);
                 it.putExtra("price", tvTotal.getText());
                 it.putExtra("date", dateButton.getText());
                 it.putExtra("time", timeButton.getText());

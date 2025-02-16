@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewBMCart" />
 
     <Button
         android:id="@+id/btnBMBack"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewBMCart" />
 
     <TextView
         android:id="@+id/textViewBM"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <ListView
-        android:id="@+id/listViewBM"
+        android:id="@+id/listViewBMCart"
         android:layout_width="357dp"
         android:layout_height="296dp"
         android:layout_marginTop="48dp"

@@ -9,18 +9,17 @@
     tools:context=".LabTestBookActivity">
 
     <Button
-        android:id="@+id/btnLTbook"
+        android:id="@+id/btnBMBbook"
         android:layout_width="305dp"
         android:layout_height="53dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/btn_bg"
         android:text="Book "
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTContNum" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBContNum" />
 
     <TextView
         android:id="@+id/textViewTitleApp"
@@ -39,7 +38,7 @@
         app:layout_constraintVertical_bias="0.005" />
 
     <TextView
-        android:id="@+id/textViewLTDetailPage"
+        android:id="@+id/textViewHA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fill all details for booking"
@@ -55,7 +54,7 @@
         app:layout_constraintVertical_bias="0.035" />
 
     <EditText
-        android:id="@+id/editTextLTFullname"
+        android:id="@+id/editTextBMBFullname"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
@@ -73,10 +72,10 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLTDetailPage" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewHA" />
 
     <EditText
-        android:id="@+id/editTextLTAdress"
+        android:id="@+id/editTextBMBAdress"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
@@ -94,13 +93,13 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTFullname" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBFullname" />
 
     <EditText
-        android:id="@+id/editTextLTContNum"
+        android:id="@+id/editTextBMBContNum"
         android:layout_width="305dp"
         android:layout_height="49dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/newnumcall"
         android:drawablePadding="10dp"
@@ -115,13 +114,13 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTCode" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBCode" />
 
     <EditText
-        android:id="@+id/editTextLTCode"
+        android:id="@+id/editTextBMBCode"
         android:layout_width="305dp"
         android:layout_height="49dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -135,8 +134,9 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTAdress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBAdress" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

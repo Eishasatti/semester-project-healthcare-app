@@ -25,11 +25,11 @@ Button btnBack,btnCart;
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_lab_test_detail);
-        tPackName=findViewById(R.id.textViewlabDet);
-        tTotalCost=findViewById(R.id.textViewldTotalCost);
-        edDetails=findViewById(R.id.editTextlDTextMultiLine);
-      btnBack=findViewById(R.id.btnlDBack);
-      btnCart=findViewById(R.id.btnlDGotocart);
+        tPackName=findViewById(R.id.textViewPackageBMD);
+        tTotalCost=findViewById(R.id.textViewBMDTotalCost);
+        edDetails=findViewById(R.id.editTextBMDTextMultiLine);
+      btnBack=findViewById(R.id.btnBMDBack);
+      btnCart=findViewById(R.id.btnBMDGotocart);
 
         edDetails.setKeyListener(null);
         Intent it=getIntent();

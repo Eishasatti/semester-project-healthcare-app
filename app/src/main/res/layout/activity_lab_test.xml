@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textViewDDetailPage"
+        android:id="@+id/textViewHA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Receiving Location:Rawalpindi"
@@ -52,18 +52,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDetailPage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHA"
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/ListViewOD"
+        android:id="@+id/ListViewHA"
         android:layout_width="409dp"
         android:layout_height="447dp"
         android:layout_margin="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnlDBack"
+        app:layout_constraintBottom_toTopOf="@+id/btnBMDBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
     </ListView>
 
     <Button
-        android:id="@+id/btnlDGotocart"
+        android:id="@+id/btnBMDGotocart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -82,19 +82,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ListViewOD"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewHA"
         app:layout_constraintVertical_bias="0.744">
 
     </Button>
 
     <Button
-        android:id="@+id/btnlDBack"
+        android:id="@+id/btnBMDBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnlDGotocart"
+        app:layout_constraintEnd_toStartOf="@+id/btnBMDGotocart"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewTitleApp"

@@ -65,7 +65,7 @@ HashMap<String,String> item;
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_doctor_detail);
-        tv=findViewById(R.id.textViewDDetailPage);
+        tv=findViewById(R.id.textViewHA);
         btn=findViewById(R.id.btnExitDDetail);
 
 

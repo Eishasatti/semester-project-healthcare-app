@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textViewDDetailPage"
+        android:id="@+id/textViewLT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Receiving Location:Rawalpindi"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.043" />
 
     <TextView
-        android:id="@+id/textViewlabDet"
+        android:id="@+id/textViewPackageBMD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab Tests and Packages"
@@ -51,12 +51,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDDetailPage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLT"
         app:layout_constraintVertical_bias="0.0" />
 
 
     <EditText
-        android:id="@+id/editTextlDTextMultiLine"
+        android:id="@+id/editTextBMDTextMultiLine"
         android:layout_width="290dp"
         android:layout_height="372dp"
         android:editable="false"
@@ -69,26 +69,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewlabDet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPackageBMD"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textViewldTotalCost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textViewBMDTotalCost"
+        android:layout_width="106dp"
+        android:layout_height="41dp"
         android:layout_marginTop="60dp"
         android:text="TextView"
         android:textColor="@color/yellowLight"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnlDGotocart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextlDTextMultiLine"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMDTextMultiLine"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnlDGotocart"
+        android:id="@+id/btnBMDGotocart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
@@ -97,19 +97,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewldTotalCost"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBMDTotalCost"
         app:layout_constraintVertical_bias="1.0">
 
     </Button>
 
     <Button
-        android:id="@+id/btnlDBack"
+        android:id="@+id/btnBMDBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnlDGotocart"
+        app:layout_constraintEnd_toStartOf="@+id/btnBMDGotocart"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewTitleApp"

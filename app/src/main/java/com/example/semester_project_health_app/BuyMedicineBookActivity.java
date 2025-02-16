@@ -15,41 +15,39 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LabTestBookActivity extends AppCompatActivity {
+public class BuyMedicineBookActivity extends AppCompatActivity {
     EditText edname, edaddress, edcontact, edpincode;
     Button btnBooking;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_lab_test_book);
-        edname=findViewById(R.id.editTextLTFullname);
-        edaddress=findViewById(R.id.editTextLTAdress);
-        edcontact=findViewById(R.id.editTextLTContNum);
-        edpincode=findViewById(R.id.editTextLTCode);
-        btnBooking=findViewById(R.id.btnHAbook);
+        setContentView(R.layout.activity_buy_medicine_book);
 
+        edname = findViewById(R.id.editTextBMBFullname);
+        edaddress = findViewById(R.id.editTextBMBAdress);
+        edcontact = findViewById(R.id.editTextBMBContNum);
+        edpincode = findViewById(R.id.editTextBMBCode);
+        btnBooking = findViewById(R.id.btnBMBbook);
         Intent intent = getIntent();
-        String[] price = intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
+        String[] price = intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote("$"));
         String date = intent.getStringExtra("date");
-        String time = intent.getStringExtra("time");
+
 
         btnBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
-                String username = sharedpreferences.getString("username", "").toString();
+                String username = sharedpreferences.getString("username", "");
 
                 DataBase db = new DataBase(getApplicationContext(), "healthcare", null, 1);
-                db.addOrder(username, edname.getText().toString(), edaddress.getText().toString(), edcontact.getText().toString(),Integer.parseInt(edpincode.getText().toString()),date.toString(),time.toString(),Float.parseFloat(price[1].toString()),"lab");
+                db.addOrder(username, edname.getText().toString(), edaddress.getText().toString(), edcontact.getText().toString(),Integer.parseInt(edpincode.getText().toString()),date.toString()," ",Float.parseFloat(price[1].toString()),"medicine");
 
-                db.removeCart(username, "lab");
-                Toast.makeText(getApplicationContext(),"your booking is done successfully",Toast.LENGTH_LONG);
-                startActivity(new Intent(LabTestBookActivity.this,HomeActivity.class));
+                db.removeCart(username, "medicine");
+                Toast.makeText(getApplicationContext(), "Your booking is done successfully", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(BuyMedicineBookActivity.this, HomeActivity.class));
             }
         });
-
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

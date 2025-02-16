@@ -58,9 +58,9 @@ ListView listview;
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_lab_test);
-        btnCart=findViewById(R.id.btnlDGotocart);
-        btnBac=findViewById(R.id.btnlDBack);
-        listview=findViewById(R.id.ListViewOD);
+        btnCart=findViewById(R.id.btnBMDGotocart);
+        btnBac=findViewById(R.id.btnBMDBack);
+        listview=findViewById(R.id.ListViewHA);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -107,7 +107,7 @@ ListView listview;
         btnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LabTestActivity.this,CartActivity.class));
+                startActivity(new Intent(LabTestActivity.this, CartLabActivity.class));
             }
         });
 

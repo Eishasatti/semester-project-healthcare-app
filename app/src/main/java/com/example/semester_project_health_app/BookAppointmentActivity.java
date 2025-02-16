@@ -2,12 +2,17 @@ package com.example.semester_project_health_app;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +31,7 @@ import java.util.Calendar;
 public class BookAppointmentActivity extends AppCompatActivity {
     EditText ed1, ed2, ed3, ed4;
     TextView tv;
+    String date,formattedTime;
     Button btn, timebtn,btnbook,btnBack;
     private DatePickerDialog datepickerdilog1;
     private TimePickerDialog timepickerdialog1;
@@ -37,10 +43,10 @@ public class BookAppointmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_appointment);
 
         tv = findViewById(R.id.textViewOtitle);
-        ed1 = findViewById(R.id.editTextLTBFullname);
-        ed2 = findViewById(R.id.editTextLTBAdress);
-        ed3 = findViewById(R.id.editTextLTBContNum);
-        ed4 = findViewById(R.id.editTextLTBCode);
+        ed1 = findViewById(R.id.editTextBMBFullname);
+        ed2 = findViewById(R.id.editTextBMBAdress);
+        ed3 = findViewById(R.id.editTextBMBContNum);
+        ed4 = findViewById(R.id.editTextBMBCode);
         btn = findViewById(R.id.btnAppDate);
         timebtn = findViewById(R.id.btnAppTime);
         btnbook=findViewById(R.id.btnBookAppoint);
@@ -54,13 +60,13 @@ public class BookAppointmentActivity extends AppCompatActivity {
 
         Intent it = getIntent();
         String title = it.getStringExtra("text1");
-        String full_name = it.getStringExtra("text2");
+        String fullname = it.getStringExtra("text2");
         String address = it.getStringExtra("text3");
         String contact = it.getStringExtra("text4");
         String fees = it.getStringExtra("text5");
 
         tv.setText(title);
-        ed1.setText(full_name);
+        ed1.setText(fullname);
         ed2.setText(address);
         ed3.setText(contact);
         ed4.setText(fees);
@@ -79,6 +85,17 @@ public class BookAppointmentActivity extends AppCompatActivity {
            btnbook.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
+                   DataBase db = new DataBase(getApplicationContext(), "healthcare", null, 1);
+                   SharedPreferences sharedpreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+                   String username = sharedpreferences.getString("username", "").toString();
+
+                   if (checkAppointmentExists(username, title+"=>"+ fullname, address, contact, date, formattedTime) == 1) {
+                       Toast.makeText(getApplicationContext(), "Appointment already booked", Toast.LENGTH_LONG).show();
+                   } else {
+                       db.addOrder(username, title + "=>"+ fullname, address, contact, 0, date, formattedTime, Float.parseFloat(fees), "appointment");
+                       Toast.makeText(getApplicationContext(), "Your appointment is done successfully", Toast.LENGTH_LONG).show();
+                       startActivity(new Intent(BookAppointmentActivity.this, HomeActivity.class));
+                   }
 
                }
            });
@@ -88,6 +105,26 @@ public class BookAppointmentActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public int checkAppointmentExists(String username, String fullname, String address, String contact, String date, String time) {
+        int result = 0;
+        String str[] = new String[6];
+        str[0] = username;
+        str[1] = fullname;
+        str[2] = address;
+        str[3] = contact;
+        str[4] = date;
+        str[5] = time;
+
+        DataBase dbHelper = new DataBase(getApplicationContext(), "healthcare", null, 1);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        Cursor c = db.rawQuery("select * from orderplace where username = ? and fullname = ? and address = ? and contact = ? and date = ? and time = ?", str);
+        if (c.moveToFirst()) {
+            result = 1;
+        }
+        db.close();
+        return result;
     }
 
     private void initDatePicker() {
@@ -114,7 +151,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
             int month = selectedDate.get(Calendar.MONTH) + 1; // Month is 0-indexed
             int year = selectedDate.get(Calendar.YEAR);
 
-            String date = day + "/" + month + "/" + year;
+            date = day + "/" + month + "/" + year;
             btn.setText(date);
         });
     }
@@ -135,9 +172,11 @@ public class BookAppointmentActivity extends AppCompatActivity {
             timePicker.addOnPositiveButtonClickListener(dialog -> {
                 int hour = timePicker.getHour();
                 int minute = timePicker.getMinute();
-                String formattedTime = String.format("%02d:%02d", hour, minute);
+                 formattedTime = String.format("%02d:%02d", hour, minute);
                 timebtn.setText(formattedTime);  // Set the formatted time on the button
             });
         });
     }
+
+
 }

@@ -69,7 +69,7 @@ public class BuyMedicineActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_buy_medicine);
 
-        lst=findViewById(R.id.listViewBM);
+        lst=findViewById(R.id.listViewBMCart);
         btnBack=findViewById(R.id.btnBMBack);
         btnGoToCart=findViewById(R.id.btnBMCart);
 

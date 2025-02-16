@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <EditText
-        android:id="@+id/editTextLTBFullname"
+        android:id="@+id/editTextBMBFullname"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewOtitle" />
 
     <EditText
-        android:id="@+id/editTextLTBAdress"
+        android:id="@+id/editTextBMBAdress"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
@@ -78,10 +78,10 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBFullname" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBFullname" />
 
     <EditText
-        android:id="@+id/editTextLTBContNum"
+        android:id="@+id/editTextBMBContNum"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="28dp"
@@ -99,10 +99,10 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBAdress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBAdress" />
 
     <EditText
-        android:id="@+id/editTextLTBCode"
+        android:id="@+id/editTextBMBCode"
         android:layout_width="305dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
@@ -120,7 +120,7 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBContNum" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBContNum" />
 
 
     <Button
@@ -135,7 +135,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBCode" />
 
     <Button
         android:id="@+id/btnBookBack"
@@ -162,7 +162,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textTime"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBCode" />
 
     <TextView
         android:id="@+id/textTime"
@@ -173,7 +173,7 @@
         android:text="Select Time"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextBMBCode" />
 
     <Button
         android:id="@+id/btnAppDate"
