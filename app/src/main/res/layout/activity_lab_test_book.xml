@@ -5,38 +5,53 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookAppointmentActivity"
-    android:background="@drawable/lbgimage">
+    android:background="@color/blueDeepSky"
+    tools:context=".LabTestBookActivity">
+
+    <Button
+        android:id="@+id/btnLTBBook"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_bg"
+        android:text="Book "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
 
     <TextView
-        android:id="@+id/textViewAppTit"
+        android:id="@+id/textViewTitleApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" 24*7 HealthCare"
-        android:textColor="@color/colorWhite"
-        android:textSize="48sp"
+        android:textColor="@color/black"
+        android:textSize="38dp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
-        android:id="@+id/textViewOtitle"
+        android:id="@+id/textViewDDetailPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book Appointment"
-        android:textColor="@color/colorWhite"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:text="Fill all details for booking"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAppTit"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleApp"
+        app:layout_constraintVertical_bias="0.035" />
 
     <EditText
         android:id="@+id/editTextLTBFullname"
@@ -57,7 +72,7 @@
         android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDDetailPage" />
 
     <EditText
         android:id="@+id/editTextLTBAdress"
@@ -107,10 +122,10 @@
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/pakrs"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Fee"
+        android:hint="Code"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -121,85 +136,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLTBContNum" />
-
-
-    <Button
-        android:id="@+id/btnBookAppoint"
-        android:layout_width="305dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="132dp"
-        android:background="@drawable/btn_bg"
-        android:text="Book Appointment"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
-
-    <Button
-        android:id="@+id/btnBookBack"
-        android:layout_width="305dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_bg"
-        android:text="Back"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBookAppoint" />
-
-    <TextView
-        android:id="@+id/TextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="24dp"
-        android:text="Select Date"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/textTime"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
-
-    <TextView
-        android:id="@+id/textTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="72dp"
-        android:text="Select Time"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLTBCode" />
-
-    <Button
-        android:id="@+id/btnAppDate"
-        style="?android:spinnerStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
-        android:text="11/1/2025"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/btnAppTime"
-        app:layout_constraintHorizontal_bias="0.009"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextDate" />
-
-    <Button
-        android:id="@+id/btnAppTime"
-        style="?android:spinnerStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="60dp"
-        android:text="10:00"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTime" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDodger"
+    tools:context=".BuyMedicineActivity">
+
+    <TextView
+        android:id="@+id/textViewAppTit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 24*7 HealthCare"
+        android:textColor="@color/colorWhite"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <Button
+        android:id="@+id/btnBMCart"
+        android:layout_width="207dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/btn_bg"
+        android:text="Go to Cart
+"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
+
+    <Button
+        android:id="@+id/btnBMBack"
+        android:layout_width="125dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/btn_bg"
+        android:text="Book "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
+
+    <TextView
+        android:id="@+id/textViewBM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="580dp"
+        android:text="Buy Medicine"
+        android:textColor="@color/colorWhite"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppTit"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <ListView
+        android:id="@+id/listViewBM"
+        android:layout_width="357dp"
+        android:layout_height="296dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

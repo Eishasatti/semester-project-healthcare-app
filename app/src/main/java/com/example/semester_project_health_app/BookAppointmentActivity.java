@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +18,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.DateValidatorPointForward;
 import com.google.android.material.datepicker.MaterialDatePicker;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 
@@ -39,11 +36,11 @@ public class BookAppointmentActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_book_appointment);
 
-        tv = findViewById(R.id.textViewAppBook);
-        ed1 = findViewById(R.id.editTextAppFullname);
-        ed2 = findViewById(R.id.editTextAppAdress);
-        ed3 = findViewById(R.id.editTextContNum);
-        ed4 = findViewById(R.id.editTextAppFee);
+        tv = findViewById(R.id.textViewOtitle);
+        ed1 = findViewById(R.id.editTextLTBFullname);
+        ed2 = findViewById(R.id.editTextLTBAdress);
+        ed3 = findViewById(R.id.editTextLTBContNum);
+        ed4 = findViewById(R.id.editTextLTBCode);
         btn = findViewById(R.id.btnAppDate);
         timebtn = findViewById(R.id.btnAppTime);
         btnbook=findViewById(R.id.btnBookAppoint);

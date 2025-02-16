@@ -15,7 +15,7 @@
         android:text="BACK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/listViewCart"
+        app:layout_constraintStart_toStartOf="@+id/listViewBM"
         app:layout_constraintTop_toBottomOf="@+id/buttonCartDatePicker" />
 
     <Button
@@ -28,7 +28,7 @@
         android:text="16/07/2022"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ListView"
+        app:layout_constraintStart_toStartOf="@+id/listViewBM"
         app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost" />
 
     <Button
@@ -40,17 +40,17 @@
         android:text="19:00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="@+id/listViewCart"
+        app:layout_constraintStart_toStartOf="@+id/listViewBM"
         app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost" />
 
     <ListView
-        android:id="@+id/listViewCart"
-        android:layout_width="314dp"
-        android:layout_height="349dp"
+        android:id="@+id/listViewBM"
+        android:layout_width="357dp"
+        android:layout_height="296dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_logo8"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="@+id/textView_logo8"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_logo8" />
 
     <TextView
@@ -80,10 +80,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_logo4" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTitle" />
 
     <TextView
-        android:id="@+id/textViewCartPackage"
+        android:id="@+id/textViewCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -105,7 +105,7 @@
     android:textSize="24sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/listViewCart" />
+    app:layout_constraintTop_toBottomOf="@+id/listViewBM" />
 
     <TextView
         android:id="@+id/textView3"
@@ -116,8 +116,10 @@
         android:textColor="@color/yellowLight"
         app:layout_constraintBottom_toTopOf="@+id/buttonCartDatePicker"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView4"
@@ -128,8 +130,10 @@
         android:textColor="@color/yellowLight"
         app:layout_constraintBottom_toTopOf="@+id/buttonCartTimePicker"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartTotalCost"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/buttonCartCheckout"

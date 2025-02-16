@@ -60,7 +60,7 @@ ListView listview;
         setContentView(R.layout.activity_lab_test);
         btnCart=findViewById(R.id.btnlDGotocart);
         btnBac=findViewById(R.id.btnlDBack);
-        listview=findViewById(R.id.ListViewlTest);
+        listview=findViewById(R.id.ListViewOD);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
